@@ -1,13 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
         >
-    <TextView
+
+    <LinearLayout android:id="@+id/login_top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="#1668A3">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/login_back"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:textSize = "20sp"
+                android:text="欢迎登陆"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/login_middle_layout"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_below="@+id/login_top_layout"
+            android:layout_above="@+id/login_button_Layout"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/login_background">
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="登陆后可收藏歌曲"/>
+
+        <EditText android:id="@+id/login_username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="邮箱"
+                android:textColor="@android:color/darker_gray"
+                />
+
+        <EditText android:id="@+id/login_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="密码"
+                android:textColor="@android:color/darker_gray"
+                />
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                >
+
+            <TextView android:id="@+id/register_button"
+                      android:layout_width="100dp"
+                      android:layout_height="40dp"
+                      android:gravity="center"
+                      android:clickable="true"
+                      android:background="@drawable/register_button_selector"
+                      android:text="注册"
+                      android:textColor="@color/button_font_color_selector"
+                      android:textSize="21sp"
+                    />
+
+            <TextView android:id="@+id/login_button"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/login_button_selector"
+                    android:text="登录"
+                    android:textColor="@color/button_font_color_selector"
+                    android:textSize="21sp"
+                    />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView android:layout_width="fill_parent"
+               android:layout_height="3dp"
+               android:layout_above="@+id/login_button_Layout"
+               android:src="@drawable/login_wave"
+               android:scaleType="fitXY"
+            />
+
+    <LinearLayout android:id="@+id/login_button_Layout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World, MainActivity"
-            />
-</LinearLayout>
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="#FFFFFF">
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用以下账号登陆"
+                android:textSize="20sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@android:color/darker_gray"
+                />
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp"
+                >
+
+            <TextView android:id="@+id/login_weibo_button"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="hide"
+                      android:textSize="16sp"
+                      android:drawablePadding="5dp"
+                      android:visibility="invisible"
+                    />
+
+
+            <TextView android:id="@+id/login_weibo_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/sina_icon"
+                    android:text="微博登陆"
+                    android:textSize="16sp"
+                    android:drawablePadding="5dp"
+                    android:paddingLeft="30dp"
+                    />
+
+            <TextView android:id="@+id/login_qq_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/qq_icon"
+                    android:text="QQ登陆"
+                    android:textSize="16sp"
+                    android:drawablePadding="5dp"
+                    android:paddingLeft="30dp"
+                    />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

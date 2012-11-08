@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="register_highlight">#83D0FB</color>
+    <color name="register_normal">#EAEAEA</color>
+    <color name="login_normal">#68A412</color>
+    <color name="login_highlight">#7DC812</color>
+</resources>
